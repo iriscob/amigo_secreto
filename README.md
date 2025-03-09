@@ -12,20 +12,20 @@ El usuario podrá agregar nombres mediante un campo de texto y un botón "Adicio
 
 ## Requisitos Previos
 Antes de ejecutar el proyecto, asegúrate de tener instalado:
-- Un navegador web moderno (Chrome, Firefox, Edge, etc.)
+- Un navegador web como Chrome, Firefox, Edge, etc.
 
 ## Instalación
-1. Clona este repositorio con Git Bash:
+1. Clona este repositorio (Git Bash):
    ```bash
    git clone https://github.com/iriscob/amigosecreto.git
    cd amigosecreto
    ```
-2. No se requieren dependencias adicionales. Solo abre el archivo `index.html` en tu navegador.
+2. No se requieren exigencias adicionales. Solo abre el archivo `index.html` en tu navegador.
 
 ## Uso
 1. Abre el archivo `index.html` en tu navegador.
-2. Ingresa los nombres de los participantes en el campo de texto y presiona "Adicionar".
-3. Una vez agregados todos los nombres, presiona "Sortear Amigo" para realizar el sorteo.
+2. Ingresa los nombres de los participantes en el campo de texto y presiona "Añadir".
+3. Una vez agregados todos los nombres, presiona "SORTEAR AMIGO" para realizar el sorteo.
 4. El resultado se mostrará en pantalla con el nombre seleccionado.
 
 ## Contribución
