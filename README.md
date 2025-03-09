@@ -35,4 +35,4 @@ Si deseas contribuir:
 3. Realiza tus cambios y haz un commit (`git commit -m "Descripción del cambio"`).
 4. Envía un pull request.
 
-## Licencia
+
