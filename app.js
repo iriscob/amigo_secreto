@@ -30,7 +30,7 @@ function actualizarListaAmigos() {
 
 function sortearAmigo() {
   if (amigos.length < 2) {
-    alert("Debes ingresar al menos dos amigos para el sorteo.");
+    alert("Ingresar al menos dos nombre de amigos para el sorteo");
     return;
   }
 
