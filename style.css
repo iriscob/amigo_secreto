@@ -59,7 +59,7 @@ body {
     font-size: 48px;
     font-family: "Merriweather", serif;
     font-weight: 900;
-    font-style: italic;
+    /*font-style: italic;*/
     color: var(--color-white);
 }
 
