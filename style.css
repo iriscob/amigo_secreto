@@ -165,6 +165,9 @@ ul {
 
 .name-list {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-    
 }
+#listaAmigos li {
+    background-color: white; /* Fondo blanco */
+    padding: 5px; /* Espacio interno para que el fondo no esté pegado al texto */
+    margin: 2px 0; /* Espacio entre los elementos de la lista */
+  }
