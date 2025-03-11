@@ -1,6 +1,6 @@
-let amigos = [ ]; // Arreglo // almacena nombres de los amigos
+let amigos = [ ]; 
 
-function agregarAmigo() { //funcion agregar nombres 
+function agregarAmigo() { 
   let nombreInput = document.getElementById("nombreAmigo");
   let nombre = nombreInput.value.trim(); // Elimina espacios en blanco al inicio y al final
 
@@ -10,15 +10,15 @@ function agregarAmigo() { //funcion agregar nombres
     }
 
   amigos.push(nombre); // Agrega nombre al arreglo
-  nombreInput.value = ""; // Limpia el campo
-    actualizarListaAmigos(); // funcion muestra la lista de amigos
-    nombreInput.focus(); 
+  nombreInput.value = ""; 
+  actualizarListaAmigos(); 
+  nombreInput.focus(); 
 
 }
 
 function actualizarListaAmigos() {
   const listaAmigos = document.getElementById("listaAmigos");
-  listaAmigos.innerHTML = ""; // Limpia la lista antes de actualizarla
+  listaAmigos.innerHTML = ""; 
 
   for (let i = 0; i < amigos.length; i++) {
       const amigo = amigos[i]; 
@@ -37,9 +37,18 @@ function sortearAmigo() {
 let indiceAleatorio = Math.floor(Math.random() * amigos.length);
 let amigoSecreto = amigos[indiceAleatorio];
 //alert("El amigo secreto sorteado es: " + amigoSecreto);
-listaAmigos.innerHTML = ""; //Limpia Lista
+listaAmigos.innerHTML = ""; 
 document.getElementById("resultado").textContent = "El amigo secreto sorteado es: " + amigoSecreto;
+}
 
+function reiniciarSorteo() {
+  amigos = []; 
+  const listaResultados = document.getElementById("resultado");
+  listaResultados.innerHTML = ""; 
+  const listaAmigos = document.getElementById("listaAmigos");
+  listaAmigos.innerHTML = ""; 
+  document.getElementById("nombreAmigo").value = ""; 
+  document.getElementById("nombreAmigo").focus(); 
 }
 
 //El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
