@@ -17,15 +17,35 @@ function agregarAmigo() {
 }
 
 function actualizarListaAmigos() {
-  const listaAmigos = document.getElementById("listaAmigos");
-  listaAmigos.innerHTML = ""; 
+  const listarAmigos = document.getElementById("listaAmigos");
+  listarAmigos.innerHTML = ""; // Limpia la lista antes de actualizarla
 
   for (let i = 0; i < amigos.length; i++) {
-      const amigo = amigos[i]; 
+      const amigo = amigos[i];
       const elementoLista = document.createElement("li");
-      elementoLista.textContent = amigo;
+
+      // span para el nombre
+      const spanNombre = document.createElement("span");
+      spanNombre.textContent = amigo;
+      elementoLista.appendChild(spanNombre);
+
+      // botón de eliminación
+      const botonEliminar = document.createElement("button");
+      botonEliminar.textContent = "Quitar(x)";
+      botonEliminar.classList.add("eliminar-amigo"); // Agrega una clase para estilizar
+      botonEliminar.onclick = function() {
+          eliminarAmigo(i); // Llama a la función de eliminación
+      };
+
+      elementoLista.appendChild(botonEliminar);
       listaAmigos.appendChild(elementoLista);
   }
+}
+
+
+function eliminarAmigo(indice) {
+  amigos.splice(indice, 1); // Elimina el amigo del array
+  actualizarListaAmigos(); // Actualiza la lista en la página
 }
 
 function sortearAmigo() {
