@@ -1,5 +1,5 @@
 :root {
-    --color-primary: #6a79c5;
+    --color-primary: #0d1f7c;
     --color-secondary: #d4cdba;
     --color-tertiary: #C4C4C4;
     --color-button: #d66d46;
@@ -15,63 +15,84 @@
     box-sizing: border-box;
 }
 
+
 body {
-    height: 100vh;
-    background-color: var(--color-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    font-family: system-ui;
+    background: #575758;
+    color: white;
+    text-align: center;
+  }
+
+
 
 .main-content {
-    
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 100%;
-}
+    width: 100%; /* Asegura que ocupe todo el ancho */
+  }
+
 
 /* Banner */
 .header-banner {
-  
-    flex: 40%;
+    flex-basis: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px 0 0;
     height: 30%;
+    
 }
 
 /* Sección de entrada */
 .input-section {
-    flex: 60%;
-    background-color: var(--color-secondary);
+    margin: 0 auto;
+    background-color: #381f7e;
     border: 1px solid #000;
-    border-radius: 45px 45px 45px 45px ;
+    border-radius: 45px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     width: 100%;
+    max-width: 600px; /* Establece el ancho máximo (ajusta este valor según tus necesidades) */
+    background-image: url('assets/green.jpg');
+    background-repeat: repeat; 
+ 
 }
 
 /* Títulos */
 .main-title {
-    font-size: 48px;
+    font-size: 36px;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
-    /*font-style: italic;*/
-    color: var(--color-white);
+    font-weight: 800;
+   /* font-style: italic;*/
+    color: #d7d8db;
+    background-color: rgb(23, 24, 102); /* Fondo blanco */
+    padding: 3px; 
+    margin: 2px 0;
+    border-radius: 45px;
+    
+
 }
 
 .section-title {
-    font-family: "Inter", serif;
-    font-size: 36px;
-    font-weight: 700;
+    font-family: Arial, serif;
+    font-size: 30px;
+    font-weight: 600;
     color: var(--color-primary);
     margin: 10px 0;
     text-align: center;
+    background-color: rgb(216, 216, 216); /* Fondo blanco */
+    padding: 3px; 
+    margin: 2px 0;
+    border-radius: 45px;
 }
+
+.ImagenAmigo {
+    width: 250px;
+    height: 200px;
+  }
 
 /* Contenedores de entrada y botón */
 .input-wrapper {
@@ -79,20 +100,23 @@ body {
     justify-content: center;
     width: 100%;
     max-width: 500px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .input-name {
     width: 100%;
     padding: 10px;
     border: 2px solid #000;
-    border-radius: 25px 0 0 25px;
+    border-radius: 45px 0 0 45px;
     font-size: 16px;
 }
 
 .button-container {
-    width: 300px;
-    justify-content: center;
+    /*width: 300px;
+    justify-content: center;*/
+    display: flex; /* Convierte el contenedor en un contenedor Flexbox */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 10px; /* Agrega un espacio entre los botones (opcional) */
 }
 
 /* Estilos de entrada de texto */
@@ -100,22 +124,22 @@ body {
     flex: 1;
     padding: 10px 15px;
     font-size: 16px;
-    border: 2px solid #333;
+    border: 2px solid #504f4f;
     border-right: none;
-    border-radius: 25px 0 0 25px;
+    border-radius: 45px 0 0 45px;
     font-family: "Merriweather", serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos de botón */
-button {
+button {  /* boton agregar */
     padding: 15px 30px;
     font-family: "Inter", sans-serif;
     font-size: 16px;
     border: 2px solid #000;
-    border-radius: 25px;
+    border-radius: 45px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
+    cursor: default;
 }
 
 .button-add {
@@ -127,6 +151,9 @@ button {
 .button-add:hover {
     background-color: #a1a1a1;
 }
+
+
+
 
 /* Listas */
 ul {
@@ -141,7 +168,6 @@ ul {
     margin-top: 15px;
     color: #051bdf;
     font-size: 22px;
-    font-weight: bold;
     text-align: center;
 }
 
@@ -150,7 +176,7 @@ ul {
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 10px 40px;
+    padding: 5px 30px;
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 16px;
@@ -161,27 +187,24 @@ ul {
 }
 
 .button-draw:hover {
+    
     background-color: var(--color-button-hover);
+    padding: 5px 30px;
 }
-.button-container {
-    /*width: 300px;
-    justify-content: center;*/
-    display: flex; /* Convierte el contenedor en un contenedor Flexbox */
-    justify-content: center; /* Centra los botones horizontalmente */
-    gap: 10px; /* Agrega un espacio entre los botones (opcional) */
-}
-
 
 .name-list {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    
 }
 #listaAmigos li {
     background-color: white; /* Fondo blanco */
     padding: 5px; /* Espacio interno para que el fondo no esté pegado al texto */
     margin: 2px 0; /* Espacio entre los elementos de la lista */
+    border-radius: 45px;
   }
 
- #resultado {
+  #resultado {
     background-color: white; /* Fondo blanco */
     padding: 5px; /* Espacio interno para que el fondo no esté pegado al texto */
     /*border: 1px solid black;  borde negro */
@@ -194,3 +217,5 @@ ul {
     border: none;
     padding: 2px 5px;
     cursor: pointer;
+}
+
