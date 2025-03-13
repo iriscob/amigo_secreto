@@ -2,9 +2,9 @@ let amigos = [ ];
 
 function agregarAmigo() { 
   let nombreInput = document.getElementById("nombreAmigo");
-  let nombre = nombreInput.value.trim(); // Elimina espacios en blanco al inicio y al final
+  let nombre = nombreInput.value.trim(); 
 
-  if (nombre === "") { // Si nombre es equivalente vacio envia la alerta
+  if (nombre === "") { 
       alert("Por favor, ingresa un nombre válido.");
       return;
     }
@@ -32,7 +32,7 @@ function actualizarListaAmigos() {
       // botón de eliminación
       const botonEliminar = document.createElement("button");
       botonEliminar.textContent = "Quitar(x)";
-      botonEliminar.classList.add("eliminar-amigo"); // Agrega una clase para estilizar
+      botonEliminar.classList.add("eliminar-amigo"); // Agrega una clase estilizar
       botonEliminar.onclick = function() {
           eliminarAmigo(i); // Llama a la función de eliminación
       };
@@ -44,7 +44,7 @@ function actualizarListaAmigos() {
 
 
 function eliminarAmigo(indice) {
-  amigos.splice(indice, 1); // Elimina el amigo del array
+  amigos.splice(indice, 1); // Elimina el nombre del array
   actualizarListaAmigos(); // Actualiza la lista en la página
 }
 
