@@ -171,3 +171,17 @@ ul {
     padding: 5px; /* Espacio interno para que el fondo no esté pegado al texto */
     margin: 2px 0; /* Espacio entre los elementos de la lista */
   }
+
+ #resultado {
+    background-color: white; /* Fondo blanco */
+    padding: 5px; /* Espacio interno para que el fondo no esté pegado al texto */
+    /*border: 1px solid black;  borde negro */
+    border-radius: 45px;
+  }
+
+  .eliminar-amigo {
+    background-color: rgb(190, 59, 59); /* Rojo */
+    color: #fff; /* Blanco */
+    border: none;
+    padding: 2px 5px;
+    cursor: pointer;
