@@ -163,6 +163,14 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+.button-container {
+    /*width: 300px;
+    justify-content: center;*/
+    display: flex; /* Convierte el contenedor en un contenedor Flexbox */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 10px; /* Agrega un espacio entre los botones (opcional) */
+}
+
 
 .name-list {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
