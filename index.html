@@ -13,8 +13,8 @@
 <body>
     <main class="main-content">
         <header class="header-banner">
-            <h1 class="main-title">Amigo Secreto</h1>
-            <img src="assets/amigo-secreto.png" alt="Imagen representativa de amigo secreto">
+            <h1 class="main-title">Sorteo Amigo Secreto</h1>
+            <img class="ImagenAmigo"src="assets/amigo-secreto.png" alt="Imagen representativa de amigo secreto">
         </header>
         
         <section class="input-section">
@@ -22,29 +22,32 @@
 
             <div class="input-wrapper">
                 <input type="text" id="nombreAmigo" class="input-name" placeholder="Escribe un nombre">
-                <button class="button-add" onclick="agregarAmigo()">Añadir</button>
-            </div>
            
-            <ol id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ol>
+                <button class="button-add" onclick="agregarAmigo()">Agregar</button>
+            
+           </div>
+            <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
            
             <ul id="resultado" class="result-list" aria-live="polite"></ul>
 
+           
             <div class="button-container">
                 <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
-                    <img src="assets/play_circle_outline.png" alt="Ícono para sortear"> Sortear </button>
+                    <img src="assets/reproducir.png" alt="Ícono para sortear"> Sortear</button>
             
                     <button class="button-draw" onclick="reiniciarSorteo()" aria-label="Reiniciar Sorteo">
-                    <img src="assets/play_circle_outline.png" alt="Ícono para reiniciar"> Reiniciar </button>
+                    <img src="assets/reset.png" alt="Ícono para reiniciar"> Reiniciar</button>
             </div>
         </section>
     </main>
-   <footer>
+    
+    <footer>
         <p>Autor: Iván Risco</p>
         <p>Challenger Amigo Secreto</p>
         
-      </footer>  
-   
+      </footer> 
     
     <script src="app.js" defer></script>
+
 </body>
 </html>
