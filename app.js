@@ -15,7 +15,7 @@ function agregarAmigo() {
     }
 
   amigos.push(nombre); 
-  nombreInput.value = ""; // Limpia el campo
+  nombreInput.value = ""; 
   actualizarListaAmigos();
   nombreInput.focus(); 
 }
@@ -32,7 +32,7 @@ nombreInput.addEventListener("keydown", function(event) {
 
 function actualizarListaAmigos() {
   const listarAmigos = document.getElementById("listaAmigos");
-  listarAmigos.innerHTML = ""; // Limpia la lista antes de actualizarla
+  listarAmigos.innerHTML = ""; 
 
   for (let i = 0; i < amigos.length; i++) {
       const amigo = amigos[i];
