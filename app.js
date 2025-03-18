@@ -1,37 +1,33 @@
-let amigos = [ ]; // Arreglo // almacena nombres de los amigos
+let amigos = [ ]; 
 
-function agregarAmigo() { //funcion agregar nombres 
-     
+function agregarAmigo() {
   let nombreInput = document.getElementById("nombreAmigo");
-  let nombre = nombreInput.value.trim(); // Elimina espacios en blanco al inicio y al final
-
-  if (nombre === "") { // Si nombre es equivalente vacio envia la alerta
+  let nombre = nombreInput.value.trim(); 
+     
+  if (nombre === "") { 
       alert("Por favor, ingresa un nombre válido.");
       return;
     }
 
-   if (amigos.includes(nombre)) { // Si nombre esta en el arreglo
+   if (amigos.includes(nombre)) { 
       alert("Este nombre ya fue ingresado.");
       return;
     }
 
-
-  amigos.push(nombre); // Agrega nombre al arreglo
+  amigos.push(nombre); 
   nombreInput.value = ""; // Limpia el campo
-  actualizarListaAmigos(); // funcion muestra la lista de amigos
+  actualizarListaAmigos();
   nombreInput.focus(); 
-
 }
 
 let nombreInput = document.getElementById("nombreAmigo");
 nombreInput.addEventListener("keydown", function(event) {
-  if (event.key === "Enter") {
+
+     if (event.key === "Enter") {
     agregarAmigo();
   }
+
 });
-
-
-
 
 
 function actualizarListaAmigos() {
@@ -50,9 +46,9 @@ function actualizarListaAmigos() {
       // botón de eliminación
       const botonEliminar = document.createElement("button");
       botonEliminar.textContent = "Quitar(x)";
-      botonEliminar.classList.add("eliminar-amigo"); // Agrega una clase para estilizar
+      botonEliminar.classList.add("eliminar-amigo"); 
       botonEliminar.onclick = function() {
-          eliminarAmigo(i); // Llama a la función de eliminación
+          eliminarAmigo(i); 
       };
 
       elementoLista.appendChild(botonEliminar);
@@ -62,10 +58,9 @@ function actualizarListaAmigos() {
 
 
 function eliminarAmigo(indice) {
-  amigos.splice(indice, 1); // Elimina el amigo del array
-  actualizarListaAmigos(); // Actualiza la lista en la página
+  amigos.splice(indice, 1); 
+  actualizarListaAmigos(); 
 }
-
 
 
 function sortearAmigo() {
@@ -77,25 +72,20 @@ function sortearAmigo() {
 let indiceAleatorio = Math.floor(Math.random() * amigos.length);
 let amigoSecreto = amigos[indiceAleatorio];
 //alert("El amigo secreto sorteado es: " + amigoSecreto);
-listaAmigos.innerHTML = ""; //Limpia Lista
+listaAmigos.innerHTML = ""; 
 document.getElementById("resultado").textContent = "El amigo secreto sorteado es: " + amigoSecreto;
 
 }
 
-
 function reiniciarSorteo() {
-  amigos = []; // Restablece el arreglo
+  amigos = []; 
   const listaResultados = document.getElementById("resultado");
-  listaResultados.innerHTML = ""; // Limpia resultados
+  listaResultados.innerHTML = ""; 
   const listaAmigos = document.getElementById("listaAmigos");
-  listaAmigos.innerHTML = ""; // Limpia la lista de amigos
-  document.getElementById("nombreAmigo").value = ""; // Limpia el input
-  document.getElementById("nombreAmigo").focus(); // Coloca el foco en el input
+  listaAmigos.innerHTML = ""; 
+  document.getElementById("nombreAmigo").value = ""; 
+  document.getElementById("nombreAmigo").focus(); 
 }
-
-
-
-
 
 
 //El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
